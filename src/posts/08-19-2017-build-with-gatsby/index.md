@@ -2,6 +2,9 @@
 path: '/yo-world'
 date: '2017-08-19T20:51:00.000Z'
 title: 'Building with Gatsby.js'
+tags:
+  - gatsby
+  - shiny
 ---
 
 I've always been fastinated by static sites — there's something alluring about building a site and being able to deploy it anywhere, without worrying about web middleware, scaling infrastructure, or [anything else].

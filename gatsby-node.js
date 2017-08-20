@@ -1,43 +1,55 @@
 const path = require('path');
+const getAllPosts = require('./src/graphql/getAllPosts');
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
-  const blogPostTemplate = path.resolve('src/templates/BlogPost.js');
-
-  return graphql(
-    `
-    {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] },
-        limit: 1000
-      ) {
-        edges {
-          node {
-            excerpt(pruneLength: 250)
-            html
-            id
-            frontmatter {
-              date(formatString: "MMMM DD, YYYY")
-              path
-              title
-            }
-          }
-        }
-      }
-    }
-  `
-  ).then(result => {
+  return getAllPosts(graphql).then(result => {
     if (result.errors) {
       return Promise.reject(result.errors);
     }
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: blogPostTemplate,
-        context: {}
-      });
-    });
+    createTagPages(createPage, result.data.allMarkdownRemark.edges);
+    createPostPages(createPage, result.data.allMarkdownRemark.edges);
   });
 };
+
+function createTagPages(createPage, edges) {
+  const TagPage = path.resolve('src/templates/TagPage.js');
+
+  let tags = {};
+
+  edges.forEach(({ node }) => {
+    if (!node.frontmatter.tags) {
+      return;
+    }
+
+    node.frontmatter.tags.forEach(tag => {
+      tags[tag] = [...(tags[tag] || []), node];
+    });
+  });
+
+  Object.keys(tags).forEach(tag => {
+    console.log('creating page for', tag);
+    createPage({
+      path: `/tags/${tag}`,
+      component: TagPage,
+      context: {
+        tag,
+        posts: tags[tag]
+      }
+    });
+  });
+}
+
+function createPostPages(createPage, edges) {
+  const BlogPost = path.resolve('src/templates/BlogPost.js');
+
+  edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: BlogPost,
+      context: {}
+    });
+  });
+}

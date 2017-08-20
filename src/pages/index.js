@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import PostItem from '../components/PostItem';
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
@@ -10,23 +11,7 @@ const IndexPage = ({ data }) => {
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
 
-      {posts.map(post => {
-        return (
-          <div className="blog-post-preview" key={post.node.id}>
-            <h1>
-              <Link to={post.node.frontmatter.path}>
-                {post.node.frontmatter.title}
-              </Link>
-            </h1>
-            <h2>
-              {post.node.frontmatter.date}
-            </h2>
-            <p>
-              {post.node.excerpt}
-            </p>
-          </div>
-        );
-      })}
+      {posts.map(post => <PostItem post={post.node} key={post.node.id} />)}
     </div>
   );
 };
@@ -44,6 +29,7 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             path
+            tags
           }
         }
       }
