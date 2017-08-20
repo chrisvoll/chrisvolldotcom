@@ -41,4 +41,9 @@ Let's find a way to render this blog post I'm writing. To the docs!
 
 The docs are actually pretty light on this, so I'm my assumption is that implementing a blog has a very generalized solution, like building on support for loading markdown files. By good fortune, the Gatsby authors anticipated this, the first post on their blog describes [building a blog](https://www.gatsbyjs.org/blog/2017-07-19-creating-a-blog-with-gatsby/). How meta. 🤘
 
-This post confirms my suspicion that this functionality isn't built right in. I won't repeat everything from that tutorial here, but the gist of it is that it has a plugin system sort of similar to webpack. If you want to use markdown files, for instance, you need to add the ability to load and parse them.
+This post confirms my suspicion that this functionality isn't built right in. I won't repeat everything from that tutorial here, but there are a couple interesting takeaways:
+
+- Gatsby has a plugin system sort of similar to webpack. If you want to use markdown files, for instance, you need to add the ability to load and parse them.
+
+- Gatsby comes with built-in support for server-side rendering of React components. Get that SEO juice a-flowin'
+
