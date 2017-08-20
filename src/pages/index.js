@@ -2,21 +2,15 @@ import React from 'react';
 import Link from 'gatsby-link';
 import PostItem from '../components/PostItem';
 
-const IndexPage = ({ data }) => {
+export default function IndexPage({ data }) {
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <div>
-      <h1>ohai</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-
       {posts.map(post => <PostItem post={post.node} key={post.node.id} />)}
     </div>
   );
-};
-
-export default IndexPage;
+}
 
 export const pageQuery = graphql`
   query IndexQuery {

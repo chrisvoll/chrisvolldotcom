@@ -3,6 +3,17 @@ module.exports = {
     title: 'Chris. Voll. Dot. Com.'
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Chris Voll',
+        short_name: 'chrisvoll',
+        start_url: '/',
+        background_color: '#f7f0eb',
+        theme_color: '#a2466c'
+      }
+    },
+    'gatsby-plugin-offline',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     {

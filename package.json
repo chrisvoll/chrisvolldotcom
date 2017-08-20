@@ -16,6 +16,8 @@
     "gatsby": "^1.8.12",
     "gatsby-link": "^1.6.8",
     "gatsby-plugin-catch-links": "^1.0.5",
+    "gatsby-plugin-manifest": "^1.0.4",
+    "gatsby-plugin-offline": "^1.0.4",
     "gatsby-plugin-react-helmet": "^1.0.3",
     "gatsby-remark-images": "^1.5.4",
     "gatsby-remark-prismjs": "^1.2.1",
