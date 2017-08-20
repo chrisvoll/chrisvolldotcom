@@ -4,9 +4,10 @@ date: '2017-08-19T20:51:00.000Z'
 title: 'Building with Gatsby.js'
 ---
 
-I've always been fastinated by static sites — there's something alluring about building a site and being able to deploy it anywhere, without worrying about web middleware, scaling infrastructure, or [anything else]. It's been a while since I've refreshed my site — four years since I set it up on DigitalOcean — so there's no better time than now!
+I've always been fastinated by static sites — there's something alluring about building a site and being able to deploy it anywhere, without worrying about web middleware, scaling infrastructure, or [anything else].
 
-In this post I'm going to document building my new site using [Gatsby](https://www.gatsbyjs.org/), a JavaScript-based newcomer to the world of static sites. This is my first time using it, so I'm writing this post and learning as I go. Get. Excited. 🎉
+It's been a while since I've refreshed my own personal site, so in the interest of [documenting learning](https://academy.realm.io/posts/droidcon-boston-chiu-ki-chan-how-to-be-an-android-expert/), I'm going to write this post while building a shiny new site using [Gatsby](https://www.gatsbyjs.org/), a JavaScript-based newcomer to the world of static sites. This is my first time using it, so I'm writing this post and learning as I go. Get. Excited. 🎉
+
 
 ## Getting Started
 
@@ -31,9 +32,10 @@ Running the setup script is painless and presents me with a nicely-structured bo
 
 Loading up the built page, I'm presented with a rather spartan page — the perfect blank canvas to build on:
 
-[screen-1]
+![Screenshot of the default Gatsby boilerplate homepage](./images/screen-1.png)
 
 Already I can tell that the developer experience is phenomenal. Gatsby comes with hot reloading right out of the box, so I can just dive right in.
+
 
 ## Setting up a blog
 
@@ -51,4 +53,8 @@ This post confirms my suspicion that this functionality isn't built right in. I 
 
 It works!
 
-[screen-2]
+![Screenshot of this very blog post being rendered within the Gatsby demo page](./images/screen-2.png)
+
+So far so good! But no weekend project would be complete without a little debugging...
+
+Error messages in Gatsby aren't always descriptive of the problem. For instance, I encountered an error [where the graphql schema failed to compile](https://github.com/gatsbyjs/gatsby/issues/1567). Turns out I'm just dumb and can't format dates, and it provided enough context to nudge me in the right direction.
