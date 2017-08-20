@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blog Post can render a default post 1`] = `
+<div
+  className="blog-post-container"
+>
+  <HelmetWrapper
+    encodeSpecialCharacters={true}
+    title="Bloggyblog - Sample Title"
+  />
+  <div
+    className="blog-post"
+  >
+    <h1>
+      Sample Title
+    </h1>
+    <div
+      className="blog-post-content"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p><strong>html</strong> output</p>",
+        }
+      }
+    />
+  </div>
+</div>
+`;

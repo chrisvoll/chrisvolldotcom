@@ -13,5 +13,19 @@ module.exports = {
 
   rules: {
     'prettier/prettier': ['error', { singleQuote: true }]
-  }
+  },
+
+  overrides: [
+    {
+      files: ['src/{__tests__,__mocks__}/**/*.js'],
+      globals: {
+        global: false,
+        shallow: false,
+        mount: false
+      },
+      env: {
+        'jest/globals': true
+      }
+    }
+  ]
 };

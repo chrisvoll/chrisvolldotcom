@@ -3,10 +3,8 @@ import Helmet from 'react-helmet';
 
 import 'prismjs/themes/prism-solarizedlight.css';
 
-export default function Template({
-  data // omg the tutorial mentions graphql get excited
-}) {
-  const post = data.markdownRemark;
+export default function BlogPost({ data }) {
+  const post = data && data.markdownRemark;
 
   return (
     <div className="blog-post-container">
