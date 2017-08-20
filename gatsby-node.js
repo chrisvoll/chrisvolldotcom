@@ -16,7 +16,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           html
           id
           frontmatter {
-            date
+            date(formatString: "MMMM DD, YYYY")
             path
             title
           }
@@ -25,7 +25,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
   }`).then(result => {
     if (result.errors) {
-      console.log('huh got an error', result.errors);
       return Promise.reject(result.errors);
     }
 
