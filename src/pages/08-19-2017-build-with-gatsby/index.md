@@ -48,3 +48,7 @@ This post confirms my suspicion that this functionality isn't built right in. I 
 - Gatsby comes with built-in support for server-side rendering of React components. Get that SEO juice a-flowin'
 
 - It uses Redux internally, and [exposes its action creators](https://www.gatsbyjs.org/docs/bound-action-creators/)
+
+It works!
+
+[screen-2]
