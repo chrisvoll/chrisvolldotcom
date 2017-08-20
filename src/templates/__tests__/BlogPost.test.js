@@ -10,7 +10,8 @@ describe('Blog Post', () => {
         frontmatter: {
           title: 'Sample Title',
           path: '/sample-title',
-          date: 'September 14, 2009'
+          date: 'September 14, 2009',
+          tags: ['tag-a', 'tag-b']
         },
         html: '<p><strong>html</strong> output</p>'
       }

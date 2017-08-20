@@ -3,11 +3,19 @@ import Link from 'gatsby-link';
 import PostItem from '../components/PostItem';
 
 export default function IndexPage({ data }) {
-  const posts = data.allMarkdownRemark.edges;
+  let posts = data.allMarkdownRemark.edges;
+
+  posts = [...posts, ...posts, ...posts, ...posts, ...posts];
 
   return (
     <div>
-      {posts.map(post => <PostItem post={post.node} key={post.node.id} />)}
+      {posts.map((post, i) =>
+        <PostItem
+          post={post.node}
+          key={`${i}${post.node.id}`}
+          transitionDelay={i * 200}
+        />
+      )}
     </div>
   );
 }

@@ -207,7 +207,7 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
-img {
+.post-content img {
   max-width: 100%;
   margin-left: 0;
   margin-right: 0;
@@ -218,7 +218,7 @@ img {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-h1 {
+.post-content h1 {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -235,7 +235,7 @@ h1 {
   font-size: 2.25rem;
   line-height: 1.1;
 }
-h2 {
+.post-content h2 {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -252,7 +252,13 @@ h2 {
   font-size: 1.62671rem;
   line-height: 1.1;
 }
-h3 {
+/* .post-content h2 a {
+  color: #477aaa;
+  text-shadow: 0 0 0 1px #FFF;
+  border-bottom: 1px solid #477aaa;
+  text-decoration: none;
+} */
+.post-content h3 {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -269,7 +275,7 @@ h3 {
   font-size: 1.38316rem;
   line-height: 1.1;
 }
-h4 {
+.post-content h4 {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -286,7 +292,7 @@ h4 {
   font-size: 1rem;
   line-height: 1.1;
 }
-h5 {
+.post-content h5 {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -303,7 +309,7 @@ h5 {
   font-size: 0.85028rem;
   line-height: 1.1;
 }
-h6 {
+.post-content h6 {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -320,7 +326,7 @@ h6 {
   font-size: 0.78405rem;
   line-height: 1.1;
 }
-hgroup {
+.post-content hgroup {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -330,7 +336,7 @@ hgroup {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-ul {
+.post-content ul {
   margin-left: 1.45rem;
   margin-right: 0;
   margin-top: 0;
@@ -342,7 +348,7 @@ ul {
   list-style-position: outside;
   list-style-image: none;
 }
-ol {
+.post-content ol {
   margin-left: 1.45rem;
   margin-right: 0;
   margin-top: 0;
@@ -354,7 +360,7 @@ ol {
   list-style-position: outside;
   list-style-image: none;
 }
-dl {
+.post-content dl {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -364,7 +370,7 @@ dl {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-dd {
+.post-content dd {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -374,7 +380,7 @@ dd {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-p {
+.post-content p {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -384,7 +390,7 @@ p {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-figure {
+.post-content figure {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -394,7 +400,7 @@ figure {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-pre {
+.post-content pre {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -411,7 +417,7 @@ pre {
   word-wrap: normal;
   padding: 1.45rem;
 }
-table {
+.post-content table {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -425,7 +431,7 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-fieldset {
+.post-content fieldset {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -435,7 +441,7 @@ fieldset {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-blockquote {
+.post-content blockquote {
   margin-left: 1.45rem;
   margin-right: 1.45rem;
   margin-top: 0;
@@ -445,7 +451,7 @@ blockquote {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-form {
+.post-content form {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -455,7 +461,7 @@ form {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-noscript {
+.post-content noscript {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -465,7 +471,7 @@ noscript {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-iframe {
+.post-content iframe {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -475,7 +481,7 @@ iframe {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-hr {
+.post-content hr {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -488,7 +494,7 @@ hr {
   border: none;
   height: 1px;
 }
-address {
+.post-content address {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -498,79 +504,79 @@ address {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-b {
+.post-content b {
   font-weight: bold;
 }
-strong {
+.post-content strong {
   font-weight: bold;
 }
-dt {
+.post-content dt {
   font-weight: bold;
 }
-th {
+.post-content th {
   font-weight: bold;
 }
-li {
+.post-content li {
   margin-bottom: calc(1.45rem / 2);
 }
-ol li {
+.post-content ol li {
   padding-left: 0;
 }
-ul li {
+.post-content ul li {
   padding-left: 0;
 }
-li > ol {
+.post-content li > ol {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }
-li > ul {
+.post-content li > ul {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }
-blockquote *:last-child {
+.post-content blockquote *:last-child {
   margin-bottom: 0;
 }
-li *:last-child {
+.post-content li *:last-child {
   margin-bottom: 0;
 }
-p *:last-child {
+.post-content p *:last-child {
   margin-bottom: 0;
 }
-li > p {
+.post-content li > p {
   margin-bottom: calc(1.45rem / 2);
 }
-code {
+.post-content code {
   font-size: 0.85rem;
   line-height: 1.45rem;
 }
-kbd {
+.post-content kbd {
   font-size: 0.85rem;
   line-height: 1.45rem;
 }
-samp {
+.post-content samp {
   font-size: 0.85rem;
   line-height: 1.45rem;
 }
-abbr {
+.post-content abbr {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
 }
-acronym {
+.post-content acronym {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
 }
-abbr[title] {
+.post-content abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
   text-decoration: none;
 }
-thead {
+.post-content thead {
   text-align: left;
 }
-td,
-th {
+.post-content td,
+.post-content th {
   text-align: left;
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
   font-feature-settings: "tnum";
@@ -582,16 +588,16 @@ th {
   padding-top: 0.725rem;
   padding-bottom: calc(0.725rem - 1px);
 }
-th:first-child,
-td:first-child {
+.post-content th:first-child,
+.post-content td:first-child {
   padding-left: 0;
 }
-th:last-child,
-td:last-child {
+.post-content th:last-child,
+.post-content td:last-child {
   padding-right: 0;
 }
-tt,
-code {
+.post-content tt,
+.post-content code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
@@ -600,21 +606,21 @@ code {
   padding-top: 0.2em;
   padding-bottom: 0.2em;
 }
-pre code {
+.post-content pre code {
   background: none;
   line-height: 1.42;
 }
-code:before,
-code:after,
-tt:before,
-tt:after {
+.post-content code:before,
+.post-content code:after,
+.post-content tt:before,
+.post-content tt:after {
   letter-spacing: -0.2em;
   content: " ";
 }
-pre code:before,
-pre code:after,
-pre tt:before,
-pre tt:after {
+.post-content pre code:before,
+.post-content pre code:after,
+.post-content pre tt:before,
+.post-content pre tt:after {
   content: "";
 }
 @media only screen and (max-width: 480px) {

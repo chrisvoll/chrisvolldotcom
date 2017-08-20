@@ -1,8 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Svg = styled.svg`
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+`;
 
 export default function BackgroundSVG() {
   return (
-    <svg width="100%" height="auto" viewBox="0 0 1024 535">
+    <Svg viewBox="0 0 1024 535">
       <defs>
         <linearGradient
           x1="64.0475814%"
@@ -53,6 +61,6 @@ export default function BackgroundSVG() {
           points="0.12271095 40.65625 0.12271095 569.9375 108.032867 569.9375 1024 184.800781 1024 0"
         />
       </g>
-    </svg>
+    </Svg>
   );
 }

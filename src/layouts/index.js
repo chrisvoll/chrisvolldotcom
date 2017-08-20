@@ -2,11 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
+import styled from 'styled-components';
 
 import Navbar from './components/Navbar';
 import Background from './components/BackgroundSVG';
 
 import './index.css';
+
+const Content = styled.div`
+  margin: 0 auto;
+  max-widrth: 960px;
+  padding: 0px 1.0875rem 1.45rem;
+  padding-top: 0;
+  position: relative;
+  z-index: 2;
+`;
 
 const TemplateWrapper = ({ children }) =>
   <div>
@@ -19,16 +29,9 @@ const TemplateWrapper = ({ children }) =>
     />
     <Navbar />
     <Background />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0
-      }}
-    >
+    <Content>
       {children()}
-    </div>
+    </Content>
   </div>;
 
 TemplateWrapper.propTypes = {

@@ -19,13 +19,16 @@
     "gatsby-plugin-manifest": "^1.0.4",
     "gatsby-plugin-offline": "^1.0.4",
     "gatsby-plugin-react-helmet": "^1.0.3",
+    "gatsby-plugin-styled-components": "^1.0.3",
     "gatsby-remark-images": "^1.5.4",
     "gatsby-remark-prismjs": "^1.2.1",
     "gatsby-source-filesystem": "^1.4.3",
     "gatsby-transformer-remark": "^1.7.1",
     "jest": "^20.0.4",
     "react-dom": "^15.6.1",
-    "react-test-renderer": "^15.6.1"
+    "react-test-renderer": "^15.6.1",
+    "react-transition-group": "1.x",
+    "styled-components": "^2.1.2"
   },
   "keywords": [
     "gatsby"

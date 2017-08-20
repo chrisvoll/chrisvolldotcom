@@ -1,5 +1,5 @@
 const path = require('path');
-const getAllPosts = require('./src/graphql/getAllPosts');
+const getAllPosts = require('./src/build/getAllPosts');
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
