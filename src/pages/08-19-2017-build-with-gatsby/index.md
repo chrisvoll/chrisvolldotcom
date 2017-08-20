@@ -58,3 +58,7 @@ It works!
 So far so good! But no weekend project would be complete without a little debugging...
 
 Error messages in Gatsby aren't always descriptive of the problem. For instance, I encountered an error [where the graphql schema failed to compile](https://github.com/gatsbyjs/gatsby/issues/1567). Turns out I'm just dumb and can't format dates, and it provided enough context to nudge me in the right direction.
+
+```javascript
+const doesThisWork = 'omg';
+```

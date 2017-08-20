@@ -1,6 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
+import 'prismjs/themes/prism-solarizedlight.css';
+
 export default function Template({
   data // omg the tutorial mentions graphql get excited
 }) {
