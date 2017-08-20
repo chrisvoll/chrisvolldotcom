@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
+import { h1, link } from '../../util/style';
 
 const Nav = styled.div`
   background: linear-gradient(to right, #fff, #e3f7ff);
@@ -12,12 +13,17 @@ const Nav = styled.div`
   height: 70px;
 `;
 
-export default function Navbar(props) {
+const Logo = styled(Link)`
+  font-family: ${h1.fontFamily};
+  ${link};
+  border-bottom: 0;
+  padding: 20px;
+`;
+
+export default function Navbar() {
   return (
     <Nav>
-      <Link to="/" style={{}}>
-        chrisvoll
-      </Link>
+      <Logo to="/">chrisvoll</Logo>
     </Nav>
   );
 }

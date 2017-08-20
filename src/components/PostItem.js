@@ -1,23 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import { CSSTransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
-import { h2, h3, p, link } from '../util/style';
+import { h2, h3, link, fadeIn } from '../util/style';
 
 const PostBody = styled.div`
-  transition-delay: ${props => props.transitionDelay}ms;
-
-  &.post-transition-appear {
-    opacity: 0.01;
-    transform: translate3d(0, 20px, 0);
-  }
-
-  &.post-transition-appear.post-transition-appear-active {
-    opacity: 1;
-    transition-duration: 0.5s;
-    transition-easing-function: ease-out;
-    transform: translate3d(0, 0, 0);
-  }
+  transition-delay: ${props => props.transitionDelay || 0}ms;
+  ${fadeIn};
 `;
 
 const Headline = styled.h2`
@@ -48,7 +38,7 @@ export default function PostItem({ post, transitionDelay }) {
       transitionEnter={false}
       transitionLeave={false}
     >
-      <PostBody className="blog-post-preview" transitionDelay={transitionDelay}>
+      <PostBody transitionDelay={transitionDelay}>
         <Headline>
           <Link to={post.frontmatter.path}>
             {post.frontmatter.title}
@@ -64,3 +54,8 @@ export default function PostItem({ post, transitionDelay }) {
     </CSSTransitionGroup>
   );
 }
+
+PostItem.propTypes = {
+  post: PropTypes.object,
+  transitionDelay: PropTypes.number
+};

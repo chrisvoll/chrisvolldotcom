@@ -30,7 +30,6 @@ function createTagPages(createPage, edges) {
   });
 
   Object.keys(tags).forEach(tag => {
-    console.log('creating page for', tag);
     createPage({
       path: `/tags/${tag}`,
       component: TagPage,

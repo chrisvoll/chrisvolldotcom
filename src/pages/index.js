@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'gatsby-link';
-import PostItem from '../components/PostItem';
+import PropTypes from 'prop-types';
+import PostList from '../components/PostList';
 
 export default function IndexPage({ data }) {
   let posts = data.allMarkdownRemark.edges;
@@ -9,16 +9,14 @@ export default function IndexPage({ data }) {
 
   return (
     <div>
-      {posts.map((post, i) =>
-        <PostItem
-          post={post.node}
-          key={`${i}${post.node.id}`}
-          transitionDelay={i * 200}
-        />
-      )}
+      <PostList posts={posts} />
     </div>
   );
 }
+
+IndexPage.propTypes = {
+  data: PropTypes.object
+};
 
 export const pageQuery = graphql`
   query IndexQuery {

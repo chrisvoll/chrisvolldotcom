@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
 import Navbar from './components/Navbar';
 import Background from './components/BackgroundSVG';
 
-import './index.css';
+import './reset.css';
+import './post-content.css';
 
 const Content = styled.div`
   margin: 0 auto;

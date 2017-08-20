@@ -1,21 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import PostItem from '../components/PostItem';
+import PostList from '../components/PostList';
+import { HeaderGroup, Headline, Tag } from '../util/style';
 
 export default function TagPage({ pathContext }) {
   const { tag, posts } = pathContext;
 
   return (
-    <div className="blog-post-container">
+    <div>
       <Helmet title={`Bloggyblog - ${tag}`} />
-      <div className="blog-post">
-        <h1>
-          {tag}
-        </h1>
 
-        {posts.map(post => <PostItem post={post} key={post.id} />)}
-      </div>
+      <HeaderGroup>
+        <Tag to="/tags">Tags</Tag>
+        <Headline>
+          {tag}
+        </Headline>
+      </HeaderGroup>
+
+      <PostList posts={posts} />
     </div>
   );
 }
+
+TagPage.propTypes = {
+  pathContext: PropTypes.object
+};

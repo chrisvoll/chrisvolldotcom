@@ -3,6 +3,7 @@ path: '/yo-world'
 date: '2017-08-19T20:51:00.000Z'
 title: 'Building with Gatsby.js'
 tags:
+  - code
   - gatsby
   - shiny
 ---
