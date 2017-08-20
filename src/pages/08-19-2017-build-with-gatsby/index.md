@@ -22,7 +22,7 @@ $ gatsby develop
 
 Running the setup script is painless and presents me with a nicely-structured boilerplate project. Diving in, I'm already noticing a couple things:
 
-1. There's almost no configuration. The project starts out with a small `gatsby-config.js` file with the project title an a minimal list of plugins.
+1. There's almost no configuration. The project starts out with a small `gatsby-config.js` file with the project title and a minimal list of plugins.
 
 2. Everything is templated out using React. Neat!
 
@@ -30,7 +30,7 @@ Running the setup script is painless and presents me with a nicely-structured bo
 
 4. The console output mentions GraphQL. Interesting! I'm dying to see how this is used in the context of a static website.
 
-Loading up the built page, I'm presented with a rather spartan page — the perfect blank canvas to build on:
+Loading up the freshly-built site, I'm presented with a rather spartan page — the perfect blank canvas to build on:
 
 ![Screenshot of the default Gatsby boilerplate homepage](./images/screen-1.png)
 

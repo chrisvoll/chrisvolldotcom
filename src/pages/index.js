@@ -1,5 +1,5 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
@@ -20,16 +20,20 @@ const IndexPage = ({ data }) => {
                 {post.node.frontmatter.title}
               </Link>
             </h1>
-            <h2>{post.node.frontmatter.date}</h2>
-            <p>{post.node.excerpt}</p>
+            <h2>
+              {post.node.frontmatter.date}
+            </h2>
+            <p>
+              {post.node.excerpt}
+            </p>
           </div>
         );
       })}
     </div>
   );
-}
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexQuery {
