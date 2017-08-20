@@ -34,34 +34,11 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
-    "lint": "eslint src",
-    "lint-fix": "eslint src --fix",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
     "test": "jest --coverage"
   },
   "devDependencies": {
     "prettier": "^1.5.3"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.js"
-    ],
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "transform": {
-      "^.+\\.js$": "<rootDir>/jest.transform.js"
-    },
-    "globals": {
-      "graphql": true
-    },
-    "moduleNameMapper": {
-      "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
-    },
-    "setupFiles": [
-      "<rootDir>/__mocks__/setupFiles.js"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
   }
 }
