@@ -3,14 +3,12 @@ import Link from 'gatsby-link';
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
-  console.log(posts);
 
   return (
     <div>
       <h1>ohai</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
-      <Link to="/page-2/">Go to page 2</Link>
 
       {posts.map(post => {
         return (

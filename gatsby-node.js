@@ -3,27 +3,31 @@ const path = require('path');
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
-  const blogPostTemplate = path.resolve('src/templates/blog-post.js');
+  const blogPostTemplate = path.resolve('src/templates/BlogPost.js');
 
-  return graphql(`{
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 1000
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 250)
-          html
-          id
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            path
-            title
+  return graphql(
+    `
+    {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] },
+        limit: 1000
+      ) {
+        edges {
+          node {
+            excerpt(pruneLength: 250)
+            html
+            id
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+              path
+              title
+            }
           }
         }
       }
     }
-  }`).then(result => {
+  `
+  ).then(result => {
     if (result.errors) {
       return Promise.reject(result.errors);
     }
@@ -33,7 +37,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         path: node.frontmatter.path,
         component: blogPostTemplate,
         context: {}
-      })
+      });
     });
   });
-}
+};

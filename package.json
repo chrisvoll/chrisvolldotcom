@@ -1,8 +1,9 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "chris-voll-dot-com",
+  "description": "Social. Local. Mobile.",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Chris Voll",
+  "private": true,
   "dependencies": {
     "babel-eslint": "^7.2.3",
     "enzyme": "^2.9.1",
@@ -35,7 +36,7 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "lint": "eslint src",
     "lint-fix": "eslint src --fix",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "devDependencies": {
     "prettier": "^1.5.3"
