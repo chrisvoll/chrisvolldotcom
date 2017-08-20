@@ -7,6 +7,10 @@ import { fadeIn } from '../util/style';
 const Fade = styled.div`
   transition-delay: ${props => props.delay}ms;
   ${fadeIn};
+
+  @media (prefers-reduced-motion) {
+    transition: 0ms !important;
+  }
 `;
 
 export default function WithFadeTransition({ delay, children }) {
@@ -14,7 +18,7 @@ export default function WithFadeTransition({ delay, children }) {
     <CSSTransitionGroup
       transitionName="post-transition"
       transitionAppear
-      transitionAppearTimeout={500}
+      transitionAppearTimeout={500 + (delay || 0)}
       transitionEnter={false}
       transitionLeave={false}
     >

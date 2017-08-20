@@ -9,7 +9,7 @@ export default function PostList({ posts }) {
         <PostItem
           post={post.node || post}
           key={`${i}${post.node ? post.node.id : post.id}`}
-          transitionDelay={i * 200}
+          transitionDelay={i * 100}
         />
       )}
     </div>

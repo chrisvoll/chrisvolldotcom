@@ -1,14 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
-import { CSSTransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
-import { h2, h3, link, fadeIn } from '../util/style';
-
-const PostBody = styled.div`
-  transition-delay: ${props => props.transitionDelay || 0}ms;
-  ${fadeIn};
-`;
+import { h2, h3, link } from '../util/style';
+import WithFadeTransition from './WithFadeTransition';
 
 const Headline = styled.h2`
   font-family: ${h2.fontFamily};
@@ -29,16 +24,9 @@ const Date = styled.h3`
 const Excerpt = styled.p``;
 
 export default function PostItem({ post, transitionDelay }) {
-  const timeout = 500 + transitionDelay;
   return (
-    <CSSTransitionGroup
-      transitionName="post-transition"
-      transitionAppear
-      transitionAppearTimeout={timeout}
-      transitionEnter={false}
-      transitionLeave={false}
-    >
-      <PostBody transitionDelay={transitionDelay}>
+    <WithFadeTransition delay={transitionDelay}>
+      <div>
         <Headline>
           <Link to={post.frontmatter.path}>
             {post.frontmatter.title}
@@ -50,8 +38,8 @@ export default function PostItem({ post, transitionDelay }) {
         <Excerpt>
           {post.excerpt}
         </Excerpt>
-      </PostBody>
-    </CSSTransitionGroup>
+      </div>
+    </WithFadeTransition>
   );
 }
 
