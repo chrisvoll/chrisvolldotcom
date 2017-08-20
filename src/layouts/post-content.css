@@ -408,3 +408,6 @@
 .post-content pre tt:after {
   content: "";
 }
+.post-content a {
+  color: #557ee9;
+}
