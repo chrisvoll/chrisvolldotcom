@@ -1,30 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Blog Post can render a default post 1`] = `
-<div
-  className="blog-post-container"
+<WithFadeTransition
+  delay={0}
 >
-  <HelmetWrapper
-    encodeSpecialCharacters={true}
-    title="Bloggyblog - Sample Title"
-  />
-  <div
-    className="blog-post"
-  >
-    <h1>
-      Sample Title
-    </h1>
-    <h2>
-      September 14, 2009
-    </h2>
-    <p>
-      Tags:
-       
-      <GatsbyLink
+  <div>
+    <HelmetWrapper
+      encodeSpecialCharacters={true}
+      title="Bloggyblog - Sample Title"
+    />
+    <styled.div>
+      <Styled(GatsbyLink)
         to="/tags/tag-a"
       >
         tag-a
-      </GatsbyLink>
+      </Styled(GatsbyLink)>
+      <styled.h1>
+        Sample Title
+      </styled.h1>
+      <styled.h3>
+        September 14, 2009
+      </styled.h3>
+    </styled.div>
+    <p>
+      Tags:
+       
       <GatsbyLink
         to="/tags/tag-b"
       >
@@ -32,7 +32,7 @@ exports[`Blog Post can render a default post 1`] = `
       </GatsbyLink>
     </p>
     <div
-      className="blog-post-content"
+      className="post-content"
       dangerouslySetInnerHTML={
         Object {
           "__html": "<p><strong>html</strong> output</p>",
@@ -40,5 +40,5 @@ exports[`Blog Post can render a default post 1`] = `
       }
     />
   </div>
-</div>
+</WithFadeTransition>
 `;
