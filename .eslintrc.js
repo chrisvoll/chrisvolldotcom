@@ -5,14 +5,16 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'prettier',
-    'prettier/react'
+    'prettier/react',
+    'plugin:jsx-a11y/recommended'
   ],
 
   plugins: [
     'react',
     'prettier',
     'import',
-    'jest'
+    'jest',
+    'jsx-a11y'
   ],
 
   env: {
