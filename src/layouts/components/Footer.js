@@ -6,7 +6,9 @@ const FooterBody = styled.div`
   text-align: center;
   padding: 40px 0;
   margin: 40px 20px 0;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
 `;
 
 const EmojiLink = styled(Link)`
