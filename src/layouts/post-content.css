@@ -411,3 +411,9 @@
 .post-content a {
   color: #3869e5;
 }
+.post-content a:hover {
+  color: #2a4da6;
+}
+.post-content a:active {
+  color: #1a3067;
+}

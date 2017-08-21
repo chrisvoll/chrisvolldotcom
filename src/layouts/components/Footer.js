@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'gatsby-link';
 
 const FooterBody = styled.div`
   text-align: center;
@@ -8,12 +9,18 @@ const FooterBody = styled.div`
   border-top: 1px solid #ddd;
 `;
 
+const EmojiLink = styled(Link)`
+  text-decoration: none;
+`;
+
 export default function Footer() {
   return (
     <FooterBody>
-      <span role="img" aria-label="Wave emoji">
-        👋
-      </span>
+      <EmojiLink to="/">
+        <span role="img" aria-label="Wave emoji. Click to go to the homepage">
+          👋
+        </span>
+      </EmojiLink>
     </FooterBody>
   );
 }

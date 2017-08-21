@@ -4,9 +4,7 @@ import PostList from '../components/PostList';
 import { HeaderGroup, Headline, Date } from '../util/style';
 
 export default function IndexPage({ data }) {
-  let posts = data.allMarkdownRemark.edges;
-
-  posts = [...posts, ...posts, ...posts, ...posts, ...posts];
+  const posts = data.allMarkdownRemark.edges;
 
   return (
     <div>
