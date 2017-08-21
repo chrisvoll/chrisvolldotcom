@@ -34,7 +34,19 @@ module.exports = {
         short_name: 'chrisvoll',
         start_url: '/',
         background_color: '#f7f0eb',
-        theme_color: '#a2466c'
+        theme_color: '#a2466c',
+        icons: [
+          {
+            src: '/android-chrome-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: '/android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
+          }
+        ]
       }
     },
     'gatsby-plugin-offline'
