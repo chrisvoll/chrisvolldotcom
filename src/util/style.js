@@ -21,7 +21,7 @@ export const p = {
   fontFamily: bodyFont
 };
 
-export const linkColor = '#557ee9';
+export const linkColor = '#3869e5';
 
 export const link = `
   color: ${linkColor};
