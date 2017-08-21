@@ -22,18 +22,21 @@ export const p = {
 };
 
 export const linkColor = '#3869e5';
+export const linkColorHover = '#2a4da6';
+export const linkColorActive = '#1a3067';
 
 export const link = `
   color: ${linkColor};
   text-decoration: none;
   border-bottom: 1px solid ${linkColor};
+  transition: 0.2s color;
 
   &:hover {
-    color: darken(${linkColor}, 20);
+    color: ${linkColorHover};
   }
 
   &:active {
-
+    color: ${linkColorActive};
   }
 `;
 

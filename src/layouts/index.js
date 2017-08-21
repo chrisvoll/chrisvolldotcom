@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Background from '../components/svgs/BackgroundSVG';
 
 import './reset.css';
@@ -11,7 +12,7 @@ import './post-content.css';
 
 const Content = styled.div`
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 800px;
   padding: 0px 1.0875rem 1.45rem;
   padding-top: 0;
   position: relative;
@@ -32,6 +33,7 @@ const TemplateWrapper = ({ children }) =>
     <Content>
       {children()}
     </Content>
+    <Footer />
   </div>;
 
 TemplateWrapper.propTypes = {

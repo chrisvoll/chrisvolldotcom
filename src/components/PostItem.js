@@ -22,24 +22,25 @@ const Date = styled.h3`
   text-align: center;
 `;
 
-const Excerpt = styled.p``;
+const Excerpt = styled.p`
+  margin-bottom: 50px;
+  color: #555;
+`;
 
 export default function PostItem({ post, transitionDelay }) {
   return (
     <WithFadeTransition delay={transitionDelay}>
-      <div>
-        <Headline>
-          <Link to={post.frontmatter.path}>
-            {post.frontmatter.title}
-          </Link>
-        </Headline>
-        <Date>
-          {post.frontmatter.date}
-        </Date>
-        <Excerpt>
-          {post.excerpt}
-        </Excerpt>
-      </div>
+      <Headline>
+        <Link to={post.frontmatter.path}>
+          {post.frontmatter.title}
+        </Link>
+      </Headline>
+      <Date>
+        {post.frontmatter.date}
+      </Date>
+      <Excerpt>
+        {post.excerpt}
+      </Excerpt>
     </WithFadeTransition>
   );
 }

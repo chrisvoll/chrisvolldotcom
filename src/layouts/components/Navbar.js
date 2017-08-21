@@ -1,10 +1,17 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
-import { h1, link } from '../../util/style';
+import {
+  h1,
+  link,
+  linkColor,
+  linkColorHover,
+  linkColorActive
+} from '../../util/style';
 
 import TwitterSVG from '../../components/svgs/TwitterSVG';
 import GithubSVG from '../../components/svgs/GithubSVG';
+import SeatgeekSVG from '../../components/svgs/SeatgeekSVG';
 
 const Nav = styled.div`
   background: linear-gradient(to right, #fff, #e3f7ff);
@@ -36,6 +43,18 @@ const Icon = styled.a`
 
   svg {
     display: block;
+
+    path {
+      fill: ${linkColor};
+    }
+  }
+
+  &:hover svg path {
+    fill: ${linkColorHover};
+  }
+
+  &:active svg path {
+    fill: ${linkColorActive};
   }
 `;
 
@@ -50,6 +69,9 @@ export default function Navbar() {
         </Icon>
         <Icon href="https://github.com/chrisvoll" title="GitHub">
           <GithubSVG />
+        </Icon>
+        <Icon href="https://seatgeek.com" title="SeatGeek">
+          <SeatgeekSVG />
         </Icon>
       </Icons>
     </Nav>

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
 import WithFadeTransition from '../components/WithFadeTransition';
 
 import { HeaderGroup, Tag, Headline, Date } from '../util/style';
@@ -13,33 +12,23 @@ export default function BlogPost({ data }) {
   const category = post.frontmatter.tags[0];
 
   return (
-    <WithFadeTransition delay={0}>
-      <div>
-        <Helmet title={`Bloggyblog - ${post.frontmatter.title}`} />
-        <HeaderGroup>
-          <Tag to={`/tags/${category}`}>
-            {category}
-          </Tag>
-          <Headline>
-            {post.frontmatter.title}
-          </Headline>
-          <Date>
-            {post.frontmatter.date}
-          </Date>
-        </HeaderGroup>
-        <p>
-          Tags:{' '}
-          {post.frontmatter.tags.slice(1).map(tag =>
-            <Link to={`/tags/${tag}`} key={tag}>
-              {tag}
-            </Link>
-          )}
-        </p>
-        <div
-          className="post-content"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
-      </div>
+    <WithFadeTransition>
+      <Helmet title={post.frontmatter.title} />
+      <HeaderGroup>
+        <Tag to={`/tags/${category}`}>
+          {category}
+        </Tag>
+        <Headline>
+          {post.frontmatter.title}
+        </Headline>
+        <Date>
+          {post.frontmatter.date}
+        </Date>
+      </HeaderGroup>
+      <div
+        className="post-content"
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
     </WithFadeTransition>
   );
 }
