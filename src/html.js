@@ -35,7 +35,7 @@ module.exports = class HTML extends React.Component {
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link
-            href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Serif+Pro"
+            href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Source+Serif+Pro"
             rel="stylesheet"
           />
           {this.props.headComponents}
