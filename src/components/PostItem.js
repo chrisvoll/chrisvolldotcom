@@ -8,6 +8,7 @@ import WithFadeTransition from './WithFadeTransition';
 const Headline = styled.h2`
   font-family: ${h2.fontFamily};
   font-size: ${h2.fontSize};
+  line-height: 140%;
   text-align: center;
 
   a {

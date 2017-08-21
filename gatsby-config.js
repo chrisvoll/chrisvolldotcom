@@ -2,7 +2,6 @@ module.exports = {
   siteMetadata: {
     title: 'Chris. Voll. Dot. Com.'
   },
-  pathPrefix: '/',
   plugins: [
     'gatsby-plugin-styled-components',
     'gatsby-plugin-catch-links',

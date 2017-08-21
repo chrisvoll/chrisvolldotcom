@@ -83,6 +83,7 @@ export const Tag = styled(Link)`
 export const Headline = styled.h1`
   font-family: ${h1.fontFamily};
   font-size: ${h1.fontSize};
+  line-height: 120%;
 `;
 
 export const Date = styled.h3`
