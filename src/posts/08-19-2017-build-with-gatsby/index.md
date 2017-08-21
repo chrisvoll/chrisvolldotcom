@@ -65,7 +65,7 @@ And don't count on GitHub Pages if you plan to use a custom domain name! If you 
 
 ## Takeaways
 
-- Gatsby and the community around it are incredible. By no means is it perfect, but I kept thinking, "🤔 I wish it could do...", only to discover that a plugin already exists with that exact functionality.
+- Gatsby and the community around it are incredible. By no means is it perfect — it came out of beta a month ago! — but I kept thinking, "🤔 I wish it could do...", only to discover that a plugin already exists with that exact functionality.
 
 - Gatsby does a ton of magic behind the scenes. In some contexts I could see how this may be a problem, but the upsides of not having to think about offline mode, server-side rendering, bundle chunking, and other headaches are totally worth it. For my day job I love tinkering with webpack, but if I'm churning out a quick weekend project, I want to be able to iterate quickly.
 
