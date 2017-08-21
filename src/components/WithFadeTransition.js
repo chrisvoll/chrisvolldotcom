@@ -22,7 +22,7 @@ export default function WithFadeTransition({ delay, children }) {
       transitionEnter={false}
       transitionLeave={false}
     >
-      <Fade delay={delay}>
+      <Fade delay={delay} className="post-transition-appear">
         {children}
       </Fade>
     </CSSTransitionGroup>

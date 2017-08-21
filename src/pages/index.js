@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PostList from '../components/PostList';
+import { HeaderGroup, Headline, Date } from '../util/style';
 
 export default function IndexPage({ data }) {
   let posts = data.allMarkdownRemark.edges;
@@ -9,6 +10,10 @@ export default function IndexPage({ data }) {
 
   return (
     <div>
+      <HeaderGroup>
+        <Headline>chrisvoll</Headline>
+        <Date>web developer @ seatgeek</Date>
+      </HeaderGroup>
       <PostList posts={posts} />
     </div>
   );
