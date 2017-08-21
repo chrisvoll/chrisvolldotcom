@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { linkColor } from '../../util/style';
 
 const FooterBody = styled.div`
   text-align: center;
