@@ -16,6 +16,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
 function createTagPages(createPage, edges) {
   const TagPage = path.resolve('src/templates/TagPage.js');
+  const TagIndex = path.resolve('src/pages/TagIndex.js');
 
   let tags = {};
 
@@ -38,6 +39,14 @@ function createTagPages(createPage, edges) {
         posts: tags[tag]
       }
     });
+  });
+
+  createPage({
+    path: '/tags',
+    component: TagIndex,
+    context: {
+      tags: Object.keys(tags)
+    }
   });
 }
 

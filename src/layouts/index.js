@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
 import Navbar from './components/Navbar';
-import Background from './components/BackgroundSVG';
+import Background from '../components/svgs/BackgroundSVG';
 
 import './reset.css';
 import './post-content.css';
