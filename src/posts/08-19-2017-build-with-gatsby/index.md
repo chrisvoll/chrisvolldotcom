@@ -8,7 +8,7 @@ tags:
   - shiny
 ---
 
-I've always been fastinated by static sites — there's something alluring about building a site and being able to deploy it anywhere, without worrying about web middleware, scaling infrastructure, managing databases, or any of the other fun pieces of modern web development.
+I've always been fascinated by static sites — there's something alluring about building a site and being able to deploy it anywhere, without worrying about web middleware, scaling infrastructure, managing databases, or any of the other fun pieces of modern web development.
 
 It's been a while since I've refreshed my own personal site, so in the interest of [documenting learning](https://academy.realm.io/posts/droidcon-boston-chiu-ki-chan-how-to-be-an-android-expert/), I'm going to write this post while building a shiny new site using [Gatsby](https://www.gatsbyjs.org/), a JavaScript-based newcomer to the world of static sites. This is my first time using it, so I'm writing this post and learning as I go. Get. Excited. 🎉
 
