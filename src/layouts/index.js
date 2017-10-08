@@ -9,6 +9,7 @@ import Background from '../components/svgs/BackgroundSVG';
 
 import './reset.css';
 import './post-content.css';
+import './prism-atom-dark.css';
 
 const Content = styled.div`
   margin: 0 auto;
