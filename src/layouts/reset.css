@@ -92,7 +92,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: 'Source Code Pro', monospace, monospace;
+  font-family: 'Source Code Pro', monospace, monospace !important;
   font-size: 1em;
 }
 figure {
