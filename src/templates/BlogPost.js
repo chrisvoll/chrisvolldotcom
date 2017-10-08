@@ -10,10 +10,20 @@ import 'prismjs/themes/prism-solarizedlight.css';
 export default function BlogPost({ data }) {
   const post = data && data.markdownRemark;
   const category = post.frontmatter.tags[0];
+  const meta = [
+    {
+      name: 'description',
+      content: post.excerpt
+    },
+    {
+      name: 'keywords',
+      content: post.frontmatter.tags.join(', ')
+    }
+  ];
 
   return (
     <WithFadeTransition>
-      <Helmet title={post.frontmatter.title} />
+      <Helmet title={post.frontmatter.title} meta={meta} />
       <HeaderGroup>
         <Tag to={`/tags/${category}`}>
           {category}
@@ -41,6 +51,7 @@ export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      excerpt(pruneLength: 160)
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path
