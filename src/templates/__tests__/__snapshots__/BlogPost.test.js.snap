@@ -4,6 +4,18 @@ exports[`Blog Post can render a default post 1`] = `
 <WithFadeTransition>
   <HelmetWrapper
     encodeSpecialCharacters={true}
+    meta={
+      Array [
+        Object {
+          "content": undefined,
+          "name": "description",
+        },
+        Object {
+          "content": "tag-a, tag-b",
+          "name": "keywords",
+        },
+      ]
+    }
     title="Sample Title"
   />
   <styled.div>
