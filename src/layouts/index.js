@@ -25,8 +25,8 @@ const TemplateWrapper = ({ children }) =>
     <Helmet
       title="Chris. Voll. Dot. Com."
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' }
+        { name: 'description', content: 'Web developer at SeatGeek' },
+        { name: 'keywords', content: 'code' }
       ]}
     />
     <Navbar />
