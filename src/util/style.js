@@ -40,20 +40,6 @@ export const link = `
   }
 `;
 
-export const fadeIn = `
-  &.post-transition-appear {
-    opacity: 0.01;
-    transform: translate3d(0, 20px, 0);
-  }
-
-  &.post-transition-appear.post-transition-appear-active {
-    opacity: 1;
-    transition-duration: 0.5s;
-    transition-easing-function: ease-out;
-    transform: translate3d(0, 0, 0);
-  }
-`;
-
 export const HeaderGroup = styled.div`
   padding: 130px 0 80px;
   text-align: center;
