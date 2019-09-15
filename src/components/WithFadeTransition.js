@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { TransitionGroup } from 'react-transition-group';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const FadeStyles = styled.div`
   .post-transition {
@@ -28,12 +28,14 @@ const FadeStyles = styled.div`
 export default function WithFadeTransition({ delay, children }) {
   return (
     <FadeStyles>
-      <TransitionGroup
-        appear
-        classNames="post-transition"
-        timeout={{ appear: 500 + (delay || 0) }}
-      >
-        {children}
+      <TransitionGroup>
+        <CSSTransition
+          appear
+          classNames="post-transition"
+          timeout={{ appear: 500 + (delay || 0) }}
+        >
+          <div>{children}</div>
+        </CSSTransition>
       </TransitionGroup>
     </FadeStyles>
   );
