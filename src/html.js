@@ -1,15 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-let stylesStr;
-if (process.env.NODE_ENV === `production`) {
-  try {
-    stylesStr = require('!raw-loader!../public/styles.css');
-  } catch (e) {
-    console.error(e); // eslint-disable-line no-console
-  }
-}
-
 export default class HTML extends React.Component {
   static propTypes = {
     headComponents: PropTypes.node,
@@ -19,15 +10,6 @@ export default class HTML extends React.Component {
   };
 
   render() {
-    let css;
-    if (process.env.NODE_ENV === `production`) {
-      css = (
-        <style
-          id="gatsby-inlined-css"
-          dangerouslySetInnerHTML={{ __html: stylesStr }}
-        />
-      );
-    }
     return (
       <html lang="en">
         <head>
@@ -39,7 +21,6 @@ export default class HTML extends React.Component {
             rel="stylesheet"
           />
           {this.props.headComponents}
-          {css}
         </head>
         <body>
           {this.props.preBodyComponents}
