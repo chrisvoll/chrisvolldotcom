@@ -20,7 +20,7 @@ const Content = styled.div`
   z-index: 2;
 `;
 
-const TemplateWrapper = ({ children }) => (
+const Layout = ({ children }) => (
   <div>
     <Helmet
       title="Chris. Voll. Dot. Com."
@@ -36,8 +36,8 @@ const TemplateWrapper = ({ children }) => (
   </div>
 );
 
-TemplateWrapper.propTypes = {
+Layout.propTypes = {
   children: PropTypes.func
 };
 
-export default TemplateWrapper;
+export default Layout;

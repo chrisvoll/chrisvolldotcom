@@ -25,8 +25,7 @@ module.exports = {
 
   globals: {
     require: false,
-    module: false,
-    graphql: false
+    module: false
   },
 
   parserOptions: {

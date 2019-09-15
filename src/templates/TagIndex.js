@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 import { HeaderGroup, Headline, link } from '../util/style';
@@ -14,8 +14,8 @@ const Tag = styled(Link)`
   padding: 10px;
 `;
 
-export default function TagIndex({ pathContext }) {
-  const { tags } = pathContext;
+export default function TagIndex({ pageContext }) {
+  const { tags } = pageContext;
 
   return (
     <div>
@@ -35,5 +35,5 @@ export default function TagIndex({ pathContext }) {
 }
 
 TagIndex.propTypes = {
-  pathContext: PropTypes.object
+  pageContext: PropTypes.object
 };

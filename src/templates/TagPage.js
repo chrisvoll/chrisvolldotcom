@@ -5,8 +5,8 @@ import Helmet from 'react-helmet';
 import PostList from '../components/PostList';
 import { HeaderGroup, Headline, Tag } from '../util/style';
 
-export default function TagPage({ pathContext }) {
-  const { tag, posts } = pathContext;
+export default function TagPage({ pageContext }) {
+  const { tag, posts } = pageContext;
 
   return (
     <div>
@@ -23,5 +23,5 @@ export default function TagPage({ pathContext }) {
 }
 
 TagPage.propTypes = {
-  pathContext: PropTypes.object
+  pageContext: PropTypes.object
 };

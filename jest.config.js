@@ -4,9 +4,6 @@ module.exports = {
   transform: {
     '^.+\\.js$': '<rootDir>/jest.transform.js'
   },
-  globals: {
-    graphql: true
-  },
   moduleNameMapper: {
     '\\.(css|scss)$': '<rootDir>/__mocks__/styleMock.js'
   },

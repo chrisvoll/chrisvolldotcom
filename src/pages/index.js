@@ -1,41 +1,41 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import PostList from '../components/PostList';
 import { HeaderGroup, Headline, Date } from '../util/style';
+import Layout from '../layouts/layout';
+import { StaticQuery, graphql } from 'gatsby';
 
-export default function IndexPage({ data }) {
-  const posts = data.allMarkdownRemark.edges;
-
+export default function IndexPage() {
   return (
-    <div>
-      <HeaderGroup>
-        <Headline>chrisvoll</Headline>
-        <Date>web developer @ seatgeek</Date>
-      </HeaderGroup>
-      <PostList posts={posts} />
-    </div>
-  );
-}
-
-IndexPage.propTypes = {
-  data: PropTypes.object
-};
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          excerpt(pruneLength: 250)
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-            path
-            tags
+    <StaticQuery
+      query={graphql`
+        query IndexQuery {
+          allMarkdownRemark(
+            sort: { order: DESC, fields: [frontmatter___date] }
+          ) {
+            edges {
+              node {
+                excerpt(pruneLength: 250)
+                id
+                frontmatter {
+                  title
+                  date(formatString: "MMMM DD, YYYY")
+                  path
+                  tags
+                }
+              }
+            }
           }
         }
-      }
-    }
-  }
-`;
+      `}
+      render={data => (
+        <Layout>
+          <HeaderGroup>
+            <Headline>chrisvoll</Headline>
+            <Date>web developer @ seatgeek</Date>
+          </HeaderGroup>
+          <PostList posts={data.allMarkdownRemark.edges} />
+        </Layout>
+      )}
+    />
+  );
+}
