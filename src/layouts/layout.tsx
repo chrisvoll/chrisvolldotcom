@@ -1,15 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import Background from '../components/svgs/BackgroundSVG';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
-import './reset.css';
 import './post-content.css';
 import './prism-atom-dark.css';
+import './reset.css';
 
 const Content = styled.div`
   margin: 0 auto;
@@ -35,9 +34,5 @@ const Layout = ({ children }) => (
     <Footer />
   </div>
 );
-
-Layout.propTypes = {
-  children: PropTypes.any
-};
 
 export default Layout;

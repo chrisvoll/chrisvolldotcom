@@ -1,6 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import React from 'react';
 import styled from 'styled-components';
 import { h2, h3, link } from '../util/style';
 import WithFadeTransition from './WithFadeTransition';
@@ -38,8 +37,3 @@ export default function PostItem({ post, transitionDelay }) {
     </WithFadeTransition>
   );
 }
-
-PostItem.propTypes = {
-  post: PropTypes.object,
-  transitionDelay: PropTypes.number
-};

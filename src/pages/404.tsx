@@ -1,6 +1,6 @@
 import React from 'react';
-import { HeaderGroup, Headline, Date } from '../util/style';
 import Layout from '../layouts/layout';
+import { Date, HeaderGroup, Headline } from '../util/style';
 
 export default function NotFoundPage() {
   return (

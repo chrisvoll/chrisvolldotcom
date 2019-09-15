@@ -1,7 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
+import React from 'react';
+import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import Layout from '../layouts/layout';
 
@@ -34,7 +33,3 @@ export default function TagIndex({ pageContext }) {
     </Layout>
   );
 }
-
-TagIndex.propTypes = {
-  pageContext: PropTypes.object
-};

@@ -1,11 +1,10 @@
+import { graphql } from 'gatsby';
 import React from 'react';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import WithFadeTransition from '../components/WithFadeTransition';
 import Layout from '../layouts/layout';
-import { graphql } from 'gatsby';
 
-import { HeaderGroup, Tag, Headline, Date } from '../util/style';
+import { Date, HeaderGroup, Headline, Tag } from '../util/style';
 
 import 'prismjs/themes/prism-solarizedlight.css';
 
@@ -39,10 +38,6 @@ export default function BlogPost({ data }) {
     </Layout>
   );
 }
-
-BlogPost.propTypes = {
-  data: PropTypes.any
-};
 
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {

@@ -1,6 +1,6 @@
+import { shallow } from 'enzyme';
 import React from 'react';
 import BlogPost from '../BlogPost';
-import { shallow } from 'enzyme';
 
 describe('Blog Post', () => {
   let data;

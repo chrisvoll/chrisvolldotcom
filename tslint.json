@@ -2,10 +2,12 @@
   "rulesDirectory": ["tslint-plugin-prettier"],
   "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier"],
   "rules": {
-    "prettier": true,
+    "import-name": false,
     "jsx-no-multiline-js": false,
     "jsx-no-lambda": false,
-    "import-name": false,
-    "no-boolean-literal-compare": false
+    "no-boolean-literal-compare": false,
+    "no-implicit-dependencies": [true, "dev"],
+    "object-literal-sort-keys": false,
+    "prettier": [true, { "singleQuote": true }]
   }
 }

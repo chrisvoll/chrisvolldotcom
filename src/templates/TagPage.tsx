@@ -1,5 +1,5 @@
+
 import React from 'react';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Layout from '../layouts/layout';
 
@@ -22,7 +22,3 @@ export default function TagPage({ pageContext }) {
     </Layout>
   );
 }
-
-TagPage.propTypes = {
-  pageContext: PropTypes.object
-};

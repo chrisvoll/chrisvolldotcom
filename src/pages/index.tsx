@@ -1,8 +1,8 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import PostList from '../components/PostList';
-import { HeaderGroup, Headline, Date } from '../util/style';
 import Layout from '../layouts/layout';
-import { useStaticQuery, graphql } from 'gatsby';
+import { Date, HeaderGroup, Headline } from '../util/style';
 
 export default function IndexPage() {
   const data = useStaticQuery(graphql`

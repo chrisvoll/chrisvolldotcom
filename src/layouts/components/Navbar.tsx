@@ -1,17 +1,17 @@
-import React from 'react';
 import { Link } from 'gatsby';
+import React from 'react';
 import styled from 'styled-components';
 import {
   h1,
   link,
   linkColor,
-  linkColorHover,
-  linkColorActive
+  linkColorActive,
+  linkColorHover
 } from '../../util/style';
 
-import TwitterSVG from '../../components/svgs/TwitterSVG';
 import GithubSVG from '../../components/svgs/GithubSVG';
 import SeatgeekSVG from '../../components/svgs/SeatgeekSVG';
+import TwitterSVG from '../../components/svgs/TwitterSVG';
 
 const Nav = styled.div`
   background: linear-gradient(to right, #fff, #e3f7ff);
