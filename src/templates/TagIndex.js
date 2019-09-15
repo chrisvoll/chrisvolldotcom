@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import Layout from '../layouts/layout';
 
 import { HeaderGroup, Headline, link } from '../util/style';
 
@@ -18,7 +19,7 @@ export default function TagIndex({ pageContext }) {
   const { tags } = pageContext;
 
   return (
-    <div>
+    <Layout>
       <Helmet title="Tags" />
 
       <HeaderGroup>
@@ -30,7 +31,7 @@ export default function TagIndex({ pageContext }) {
           {tag}
         </Tag>
       ))}
-    </div>
+    </Layout>
   );
 }
 

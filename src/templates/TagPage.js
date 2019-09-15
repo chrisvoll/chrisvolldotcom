@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import Layout from '../layouts/layout';
 
 import PostList from '../components/PostList';
 import { HeaderGroup, Headline, Tag } from '../util/style';
@@ -9,8 +10,8 @@ export default function TagPage({ pageContext }) {
   const { tag, posts } = pageContext;
 
   return (
-    <div>
-      <Helmet title={`Bloggyblog - ${tag}`} />
+    <Layout>
+      <Helmet title={tag} />
 
       <HeaderGroup>
         <Tag to="/tags">Tags</Tag>
@@ -18,7 +19,7 @@ export default function TagPage({ pageContext }) {
       </HeaderGroup>
 
       <PostList posts={posts} />
-    </div>
+    </Layout>
   );
 }
 
