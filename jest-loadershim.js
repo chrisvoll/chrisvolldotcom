@@ -3,7 +3,7 @@ import Enzyme from 'enzyme';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-jest.mock('gatsby');
+jest.mock('gatsby'); // eslint-disable-line
 
 global.___loader = {
   enqueue: jest.fn() // eslint-disable-line
