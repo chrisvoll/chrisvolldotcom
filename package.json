@@ -5,6 +5,9 @@
   "author": "Chris Voll",
   "private": true,
   "dependencies": {
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-helmet": "^5.0.10",
     "babel-jest": "^24.9.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
@@ -16,6 +19,8 @@
     "gatsby-plugin-react-helmet": "^3.1.7",
     "gatsby-plugin-sharp": "^2.2.22",
     "gatsby-plugin-styled-components": "^3.1.5",
+    "gatsby-plugin-tslint": "^0.0.2",
+    "gatsby-plugin-typescript": "^2.1.7",
     "gatsby-remark-images": "^3.1.22",
     "gatsby-remark-prismjs": "^3.3.13",
     "gatsby-source-filesystem": "^2.1.22",
@@ -26,7 +31,13 @@
     "react-helmet": "^5.2.1",
     "react-test-renderer": "^16.9.0",
     "react-transition-group": "4.3.0",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-loader": "^3.5.4",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.6.3"
   },
   "keywords": [
     "gatsby"
