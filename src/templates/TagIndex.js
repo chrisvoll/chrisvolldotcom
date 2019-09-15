@@ -25,11 +25,11 @@ export default function TagIndex({ pathContext }) {
         <Headline>Tags</Headline>
       </HeaderGroup>
 
-      {tags.map(tag =>
+      {tags.map(tag => (
         <Tag key={tag} to={`/tags/${tag}`}>
           {tag}
         </Tag>
-      )}
+      ))}
     </div>
   );
 }

@@ -14,9 +14,7 @@ export default function TagPage({ pathContext }) {
 
       <HeaderGroup>
         <Tag to="/tags">Tags</Tag>
-        <Headline>
-          {tag}
-        </Headline>
+        <Headline>{tag}</Headline>
       </HeaderGroup>
 
       <PostList posts={posts} />

@@ -65,7 +65,7 @@ export const Tag = styled(Link)`
   font-weight: 600;
   letter-spacing: 1px;
   background: ${linkColor};
-  color: #FFF;
+  color: #fff;
   padding: 5px 15px;
   border-radius: 13px;
   text-transform: uppercase;

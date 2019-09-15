@@ -31,16 +31,10 @@ export default function PostItem({ post, transitionDelay }) {
   return (
     <WithFadeTransition delay={transitionDelay}>
       <Headline>
-        <Link to={post.frontmatter.path}>
-          {post.frontmatter.title}
-        </Link>
+        <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
       </Headline>
-      <Date>
-        {post.frontmatter.date}
-      </Date>
-      <Excerpt>
-        {post.excerpt}
-      </Excerpt>
+      <Date>{post.frontmatter.date}</Date>
+      <Excerpt>{post.excerpt}</Excerpt>
     </WithFadeTransition>
   );
 }

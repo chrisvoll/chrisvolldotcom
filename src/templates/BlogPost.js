@@ -25,15 +25,9 @@ export default function BlogPost({ data }) {
     <WithFadeTransition>
       <Helmet title={post.frontmatter.title} meta={meta} />
       <HeaderGroup>
-        <Tag to={`/tags/${category}`}>
-          {category}
-        </Tag>
-        <Headline>
-          {post.frontmatter.title}
-        </Headline>
-        <Date>
-          {post.frontmatter.date}
-        </Date>
+        <Tag to={`/tags/${category}`}>{category}</Tag>
+        <Headline>{post.frontmatter.title}</Headline>
+        <Date>{post.frontmatter.date}</Date>
       </HeaderGroup>
       <div
         className="post-content"
