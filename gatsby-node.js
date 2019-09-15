@@ -1,5 +1,5 @@
 const path = require('path');
-const getAllPosts = require('./src/build/getAllPosts');
+const getAllPosts = require('./src/build/getAllPosts.ts');
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
@@ -15,8 +15,8 @@ exports.createPages = ({ actions, graphql }) => {
 };
 
 function createTagPages(createPage, edges) {
-  const TagPage = path.resolve('src/templates/TagPage.js');
-  const TagIndex = path.resolve('src/templates/TagIndex.js');
+  const TagPage = path.resolve('src/templates/TagPage.tsx');
+  const TagIndex = path.resolve('src/templates/TagIndex.tsx');
 
   let tags = {};
 
@@ -51,7 +51,7 @@ function createTagPages(createPage, edges) {
 }
 
 function createPostPages(createPage, edges) {
-  const BlogPost = path.resolve('src/templates/BlogPost.js');
+  const BlogPost = path.resolve('src/templates/BlogPost.tsx');
 
   edges.forEach(({ node }) => {
     createPage({
