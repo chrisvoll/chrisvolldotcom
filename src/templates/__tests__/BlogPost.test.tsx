@@ -3,11 +3,11 @@ import React from 'react';
 import BlogPost from '../BlogPost';
 
 describe('Blog Post', () => {
-  let data;
-
-  beforeEach(() => {
-    data = {
+  function renderShallow() {
+    const data = {
       markdownRemark: {
+        id: 1,
+        excerpt: '',
         frontmatter: {
           title: 'Sample Title',
           path: '/sample-title',
@@ -17,9 +17,6 @@ describe('Blog Post', () => {
         html: '<p><strong>html</strong> output</p>'
       }
     };
-  });
-
-  function renderShallow() {
     return shallow(<BlogPost data={data} />);
   }
 

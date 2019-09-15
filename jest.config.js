@@ -3,7 +3,7 @@ module.exports = {
   roots: ['<rootDir>/src'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleNameMapper: {
-    '\\.(css|scss)$': '<rootDir>/__mocks__/styleMock.js'
+    '\\.(css|scss)$': '<rootDir>/__mocks__/styleMock.ts'
   },
   setupFiles: ['<rootDir>/jest-loadershim.ts'],
   snapshotSerializers: ['enzyme-to-json/serializer'],

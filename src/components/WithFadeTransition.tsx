@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const FadeStyles = styled.div`
   .post-transition {
-    transition-delay: ${props => props.delay}ms;
+    transition-delay: ${(props: { delay: number }) => props.delay}ms;
 
     @media (prefers-reduced-motion) {
       transition: 0ms !important;
@@ -19,14 +19,18 @@ const FadeStyles = styled.div`
   .post-transition-appear.post-transition-appear-active {
     opacity: 1;
     transition-duration: 0.5s;
-    transition-easing-function: ease-out;
+    transition-timing-function: ease-out;
     transform: translate3d(0, 0, 0);
   }
 `;
 
-export default function WithFadeTransition({ delay, children }) {
+interface IProps {
+  delay?: number;
+}
+
+const WithFadeTransition: React.FC<IProps> = ({ delay = 0, children }) => {
   return (
-    <FadeStyles>
+    <FadeStyles delay={delay}>
       <TransitionGroup>
         <CSSTransition
           appear={true}
@@ -38,4 +42,6 @@ export default function WithFadeTransition({ delay, children }) {
       </TransitionGroup>
     </FadeStyles>
   );
-}
+};
+
+export default WithFadeTransition;

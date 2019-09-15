@@ -4,7 +4,7 @@ import PostList from '../components/PostList';
 import Layout from '../layouts/layout';
 import { Date, HeaderGroup, Headline } from '../util/style';
 
-export default function IndexPage() {
+const IndexPage: React.FC = () => {
   const data = useStaticQuery(graphql`
     query IndexQuery {
       allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
@@ -33,4 +33,6 @@ export default function IndexPage() {
       <PostList posts={data.allMarkdownRemark.edges} />
     </Layout>
   );
-}
+};
+
+export default IndexPage;

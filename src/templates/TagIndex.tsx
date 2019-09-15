@@ -14,7 +14,13 @@ const Tag = styled(Link)`
   padding: 10px;
 `;
 
-export default function TagIndex({ pageContext }) {
+interface IProps {
+  pageContext: {
+    tags: string[];
+  };
+}
+
+const TagIndex: React.FC<IProps> = ({ pageContext }) => {
   const { tags } = pageContext;
 
   return (
@@ -32,4 +38,6 @@ export default function TagIndex({ pageContext }) {
       ))}
     </Layout>
   );
-}
+};
+
+export default TagIndex;

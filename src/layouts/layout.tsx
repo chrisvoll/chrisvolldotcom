@@ -19,7 +19,7 @@ const Content = styled.div`
   z-index: 2;
 `;
 
-const Layout = ({ children }) => (
+const Layout: React.FC = ({ children }) => (
   <div>
     <Helmet
       title="Chris. Voll. Dot. Com."

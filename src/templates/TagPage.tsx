@@ -1,12 +1,19 @@
-
 import React from 'react';
 import Helmet from 'react-helmet';
 import Layout from '../layouts/layout';
 
 import PostList from '../components/PostList';
+import { IPost } from '../types';
 import { HeaderGroup, Headline, Tag } from '../util/style';
 
-export default function TagPage({ pageContext }) {
+interface IProps {
+  pageContext: {
+    tag: string;
+    posts: IPost[];
+  };
+}
+
+const TagPage: React.FC<IProps> = ({ pageContext }) => {
   const { tag, posts } = pageContext;
 
   return (
@@ -21,4 +28,6 @@ export default function TagPage({ pageContext }) {
       <PostList posts={posts} />
     </Layout>
   );
-}
+};
+
+export default TagPage;

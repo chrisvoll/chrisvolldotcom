@@ -15,7 +15,7 @@ const EmojiLink = styled(Link)`
   text-decoration: none;
 `;
 
-export default function Footer() {
+const Footer: React.FC = () => {
   return (
     <FooterBody>
       <EmojiLink to="/">
@@ -25,4 +25,6 @@ export default function Footer() {
       </EmojiLink>
     </FooterBody>
   );
-}
+};
+
+export default Footer;

@@ -3,12 +3,18 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import WithFadeTransition from '../components/WithFadeTransition';
 import Layout from '../layouts/layout';
-
+import { IPost } from '../types';
 import { Date, HeaderGroup, Headline, Tag } from '../util/style';
 
 import 'prismjs/themes/prism-solarizedlight.css';
 
-export default function BlogPost({ data }) {
+interface IProps {
+  data: {
+    markdownRemark: IPost;
+  };
+}
+
+const BlogPost: React.FC<IProps> = ({ data }) => {
   const post = data && data.markdownRemark;
   const category = post.frontmatter.tags[0];
   const meta = [
@@ -37,7 +43,9 @@ export default function BlogPost({ data }) {
       </WithFadeTransition>
     </Layout>
   );
-}
+};
+
+export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {

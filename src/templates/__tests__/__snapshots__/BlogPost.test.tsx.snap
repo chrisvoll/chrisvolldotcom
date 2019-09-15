@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blog Post can render a default post 1`] = `
+<Layout>
+  <WithFadeTransition>
+    <HelmetWrapper
+      defer={true}
+      encodeSpecialCharacters={true}
+      meta={
+        Array [
+          Object {
+            "content": "",
+            "name": "description",
+          },
+          Object {
+            "content": "tag-a, tag-b",
+            "name": "keywords",
+          },
+        ]
+      }
+      title="Sample Title"
+    />
+    <styled.div>
+      <Styled(Component)
+        to="/tags/tag-a"
+      >
+        tag-a
+      </Styled(Component)>
+      <styled.h1>
+        Sample Title
+      </styled.h1>
+      <styled.h3>
+        September 14, 2009
+      </styled.h3>
+    </styled.div>
+    <div
+      className="post-content"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p><strong>html</strong> output</p>",
+        }
+      }
+    />
+  </WithFadeTransition>
+</Layout>
+`;

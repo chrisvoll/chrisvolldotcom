@@ -13,6 +13,26 @@ import GithubSVG from '../../components/svgs/GithubSVG';
 import SeatgeekSVG from '../../components/svgs/SeatgeekSVG';
 import TwitterSVG from '../../components/svgs/TwitterSVG';
 
+const Navbar: React.FC = () => (
+  <Nav>
+    <Logo to="/">chrisvoll</Logo>
+
+    <Icons>
+      <Icon href="https://twitter.com/chrisvoll" title="Twitter">
+        <TwitterSVG />
+      </Icon>
+      <Icon href="https://github.com/chrisvoll" title="GitHub">
+        <GithubSVG />
+      </Icon>
+      <Icon href="https://seatgeek.com" title="SeatGeek">
+        <SeatgeekSVG />
+      </Icon>
+    </Icons>
+  </Nav>
+);
+
+export default Navbar;
+
 const Nav = styled.div`
   background: linear-gradient(to right, #fff, #e3f7ff);
   box-shadow: 0 2px 18px rgba(0, 0, 0, 0.1);
@@ -57,23 +77,3 @@ const Icon = styled.a`
     fill: ${linkColorActive};
   }
 `;
-
-export default function Navbar() {
-  return (
-    <Nav>
-      <Logo to="/">chrisvoll</Logo>
-
-      <Icons>
-        <Icon href="https://twitter.com/chrisvoll" title="Twitter">
-          <TwitterSVG />
-        </Icon>
-        <Icon href="https://github.com/chrisvoll" title="GitHub">
-          <GithubSVG />
-        </Icon>
-        <Icon href="https://seatgeek.com" title="SeatGeek">
-          <SeatgeekSVG />
-        </Icon>
-      </Icons>
-    </Nav>
-  );
-}
