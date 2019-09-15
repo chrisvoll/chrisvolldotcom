@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === `production`) {
   }
 }
 
-module.exports = class HTML extends React.Component {
+export default class HTML extends React.Component {
   static propTypes = {
     headComponents: PropTypes.node,
     preBodyComponents: PropTypes.node,
@@ -53,4 +53,4 @@ module.exports = class HTML extends React.Component {
       </html>
     );
   }
-};
+}
