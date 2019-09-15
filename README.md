@@ -6,4 +6,4 @@ See all it can do: https://chrisvoll.com/
 
 ## Deploying
 
-Push to master, then `yarn deploy`
+Push to master, and netlify deploys it automatically.
