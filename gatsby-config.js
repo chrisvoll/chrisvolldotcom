@@ -3,6 +3,8 @@ module.exports = {
     title: 'Chris. Voll. Dot. Com.'
   },
   plugins: [
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-tslint',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',

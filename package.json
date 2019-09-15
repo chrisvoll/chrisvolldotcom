@@ -46,10 +46,10 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "lint": "eslint .",
-    "lint-fix": "eslint . --fix",
+    "dev": "gatsby develop",
+    "lint": "tslint --project .",
     "test": "jest --coverage",
+    "type-check": "tsc --noEmit",
     "verify": "yarn lint && yarn test"
   },
   "devDependencies": {
